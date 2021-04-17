@@ -1,4 +1,5 @@
 #include "manager.h"
+
 void saveData(Product *p, int count)
 {
     FILE *fp;
@@ -11,6 +12,28 @@ void saveData(Product *p, int count)
     fclose(fp);
     printf("=> 저장됨");
 }
+
+int loadData(Product *p)
+{
+    int count = 0, i = 0;
+    FILE *fp;
+    fp = fopen("product.txt", "rt");
+
+    for(; i<100; i++){
+        fscanf(fp, "%s", p[i].name);
+        if(feof(fp)) break;
+        fscanf(fp, "%d", &p[i].weight);
+        fscanf(fp, "%d", &p[i].price);
+        fscanf(fp, "%d", &p[i].point);
+        fscanf(fp, "%d", &p[i].npoint);
+        count++;
+    }
+    fclose(fp);
+    if(count == 0) printf("=> 파일 없음!\n");
+    else printf("=> 로딩 성공!\n");
+    return i;
+}
+
 int createProduct(Product *p) 
 {
     printf("제품명은? : ");
