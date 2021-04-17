@@ -2,7 +2,7 @@
 
 int main() {
     Product p[20];
-    int count = 0, index, no, menu;
+    int count = 0, index = 0, no, menu;
 #ifdef DEBUG
     printf("DEBUGMODE\n");
 #endif
@@ -19,7 +19,7 @@ int main() {
                 printf("=> 데이터가 없습니다.\n");
         }
         else if (menu == 2){
-            count = createProduct(&p[index++]);
+            count += createProduct(&p[index++]);
         }
         else if (menu == 3){
             no = selectDataNo(p, index);
