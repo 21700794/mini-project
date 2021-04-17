@@ -6,6 +6,9 @@ int main() {
 #ifdef DEBUG
     printf("DEBUGMODE\n");
 #endif
+    count = loadData(p);
+    index = count;
+
     while(1){
         menu = selectMenu();
         if(menu == 0) break;
