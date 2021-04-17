@@ -8,7 +8,8 @@ typedef struct _product{
     int npoint;
 } Product;
 
-void saveData(Product *p, int count)
+void saveData(Product *p, int count);
+int loadData(Product *p);
 int createProduct(Product *p);
 void readProduct(Product p);
 int updateProduct(Product *p);
