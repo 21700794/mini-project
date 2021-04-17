@@ -1,6 +1,6 @@
 #include "manager.h"
 
-int main() {
+int main(){
     Product p[20];
     int count = 0, index = 0, no, menu;
 #ifdef DEBUG
@@ -56,6 +56,7 @@ int main() {
 		if(search == 2) searchPrice(p, index);
 		if(search == 3) searchPoint(p, index);
 	}
+    }
     printf("종료됨!\n");
     return 0;
 }
