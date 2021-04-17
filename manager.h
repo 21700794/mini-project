@@ -16,6 +16,8 @@ void readProduct(Product p);
 int updateProduct(Product *p);
 int deleteProduct(Product *p);
 void searchProduct(Product *p, int count);
+void searchPrice(Product *p, int count);
+void searchPoint(Product *p, int count)
 int selectMenu();
 void listProduct(Product *p, int count);
 int selectDataNo(Product *p, int index);
