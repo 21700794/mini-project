@@ -1,5 +1,16 @@
 #include "manager.h"
+void saveData(Product *p, int count)
+{
+    FILE *fp;
+    fp = fopen("product.txt", "wt");
 
+    for(int i = 0; i < count; i++){
+        if(p[i].price == -1) continue;
+        fprintf(fp, "%4s %4d %4d %4d %4d", p[i].name, p[i].weight, p[i].price, p[i].point, p[i].npoint);
+    }
+    fclose(fp);
+    printf("=> 저장됨");
+}
 int createProduct(Product *p) 
 {
     printf("제품명은? : ");
