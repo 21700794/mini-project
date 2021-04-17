@@ -104,6 +104,28 @@ void listProduct(Product *p, int count){
     }
 }
 
+void searchProduct(Product *p, int count) 
+{
+    int scnt = 0;
+    char search[50];
+
+    printf("검색할 제품명은? : ");
+    scanf(" %s", search);
+
+    printf("\nNo Name Weight Price Point Number\n");
+    printf("=======================================");
+    for(int i = 0; i < count; i++){
+        if(p[i].price == -1) continue;
+        if(strstr(p[i].name, search)){
+            printf("%2d", i+1);
+            readProduct(p[i]);
+            scnt++;
+        }
+    }
+    if(scnt == 0) printf("=> 검색할 데이터가 없습니다.");
+    printf("\n");
+}
+
 int selectDataNo(Product *p, int index){
 	int no;
 	listProduct(p, index);
