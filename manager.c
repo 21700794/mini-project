@@ -127,7 +127,49 @@ void searchProduct(Product *p, int count)
     if(scnt == 0) printf("=> 검색할 데이터가 없습니다.");
     printf("\n");
 }
+void searchPrice(Product *p, int count) 
+{
+    int scnt = 0;
+    int searchPr;
 
+    printf("검색할 가격은? : ");
+    scanf(" %d", searchPr);
+
+    printf("\nNo Name Weight Price Point Number\n");
+    printf("=======================================");
+    for(int i = 0; i < count; i++){
+        if(p[i].price == -1) continue;
+        if(searchPr == p[i].price){
+            printf("%2d", i+1);
+            readProduct(p[i]);
+            scnt++;
+        }
+    }
+    if(scnt == 0) printf("=> 검색할 데이터가 없습니다.");
+    printf("\n");
+}
+
+void searchPoint(Product *p, int count) 
+{
+    int scnt = 0;
+    int searchP;
+
+    printf("검색할 제품명은? : ");
+    scanf(" %d", searchP);
+
+    printf("\nNo Name Weight Price Point Number\n");
+    printf("=======================================");
+    for(int i = 0; i < count; i++){
+        if(p[i].price == -1) continue;
+        if(searchP == p[i].point){
+            printf("%2d", i+1);
+            readProduct(p[i]);
+            scnt++;
+        }
+    }
+    if(scnt == 0) printf("=> 검색할 데이터가 없습니다.");
+    printf("\n");
+}
 int selectDataNo(Product *p, int index){
 	int no;
 	listProduct(p, index);
