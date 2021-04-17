@@ -133,7 +133,7 @@ void searchPrice(Product *p, int count)
     int searchPr;
 
     printf("검색할 가격은? : ");
-    scanf(" %d", searchPr);
+    scanf(" %d", &searchPr);
 
     printf("\nNo Name Weight Price Point Number\n");
     printf("=======================================");
@@ -155,7 +155,7 @@ void searchPoint(Product *p, int count)
     int searchP;
 
     printf("검색할 제품명은? : ");
-    scanf(" %d", searchP);
+    scanf(" %d", &searchP);
 
     printf("\nNo Name Weight Price Point Number\n");
     printf("=======================================");
