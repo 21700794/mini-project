@@ -49,9 +49,13 @@ int main() {
 		saveData(p, index);
 	}
 	else if(menu == 6){
-		searchProduct(p, index);
+		int search = 0;
+		printf("1. 이름, 2. 가격, 3. 별점");
+		scanf(" %d", search);
+		if(search == 1) searchProduct(p, index);
+		if(search == 2) searchPrice(p, index);
+		if(search == 3) searchPoint(p, index);
 	}
-    }
     printf("종료됨!\n");
     return 0;
 }
