@@ -115,7 +115,7 @@ void searchProduct(Product *p, int count)
     scanf(" %s", search);
 
     printf("\nNo Name Weight Price Point Number\n");
-    printf("=======================================");
+    printf("=======================================\n");
     for(int i = 0; i < count; i++){
         if(p[i].price == -1) continue;
         if(strstr(p[i].name, search)){
@@ -136,7 +136,7 @@ void searchPrice(Product *p, int count)
     scanf(" %d", &searchPr);
 
     printf("\nNo Name Weight Price Point Number\n");
-    printf("=======================================");
+    printf("=======================================\n");
     for(int i = 0; i < count; i++){
         if(p[i].price == -1) continue;
         if(searchPr == p[i].price){
@@ -154,11 +154,11 @@ void searchPoint(Product *p, int count)
     int scnt = 0;
     int searchP;
 
-    printf("검색할 제품명은? : ");
+    printf("검색할 별점은? : ");
     scanf(" %d", &searchP);
 
     printf("\nNo Name Weight Price Point Number\n");
-    printf("=======================================");
+    printf("=======================================\n");
     for(int i = 0; i < count; i++){
         if(p[i].price == -1) continue;
         if(searchP == p[i].point){
